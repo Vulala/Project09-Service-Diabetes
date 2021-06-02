@@ -1,4 +1,4 @@
-package com.abernathyclinic.mediscreen.service_diabetes;
+package com.abernathyclinic.mediscreen.service_diabetes.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;

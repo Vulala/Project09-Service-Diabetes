@@ -21,7 +21,7 @@ public class DiabetesReportController {
 
 	@GetMapping("/")
 	public String index() {
-		return "Welcome on Service-Diabetes ! \n Micro-service targeted to generate diabetes report for a patient.";
+		return "Welcome on Service-Diabetes ! \n Micro-service targeted to generate diabetes predisposition report for the patient.";
 	}
 
 	@GetMapping("/assess")

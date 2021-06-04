@@ -20,9 +20,9 @@ class DiabetesAssessmentTest {
 	@Autowired
 	private DiabetesAssessment diabetesAssessment = new DiabetesAssessment();
 
-	private Patient patientMale = new Patient("lastName", "firstName", "01/01/2000", "male", "homeAddress",
+	private Patient patientMale = new Patient("lastName", "firstName", "2020-01-01", "male", "homeAddress",
 			"phoneNumber");
-	private Patient patientFemale = new Patient("lastName", "firstName", "01/01/2000", "female", "homeAddress",
+	private Patient patientFemale = new Patient("lastName", "firstName", "2020-01-01", "female", "homeAddress",
 			"phoneNumber");
 
 	@DisplayName("Calculate the diabetes predisposition for a Male with less than 30yo which result in: NONE")
@@ -63,7 +63,7 @@ class DiabetesAssessmentTest {
 	@DisplayName("Calculate the diabetes predisposition for a Male with or more than 30yo which result in: NONE")
 	@Test
 	void givenGettingADiabetesReportForAMaleWithOrMoreThan30Years_whenCalculateDiabetesReportForMale_ThenItReturnAnAccuratePatientDiabetesReportWhichResultOfNone() {
-		patientMale.setDateOfBirth("01/01/0001");
+		patientMale.setDateOfBirth("0001-01-01");
 		PatientNote patientNote = new PatientNote(UUID.randomUUID(), "");
 
 		PatientDiabetesReport patientDiabetesReportResult = diabetesAssessment
@@ -75,7 +75,7 @@ class DiabetesAssessmentTest {
 	@DisplayName("Calculate the diabetes predisposition for a Male with or more than 30yo which result in: BORDERLINE")
 	@Test
 	void givenGettingADiabetesReportForAMaleWithOrMoreThan30Years_whenCalculateDiabetesReportForMale_ThenItReturnAnAccuratePatientDiabetesReportWhichResultOfBorderline() {
-		patientMale.setDateOfBirth("01/01/0001");
+		patientMale.setDateOfBirth("0001-01-01");
 		PatientNote patientNote = new PatientNote(UUID.randomUUID(), "Hémoglobine A1C, Microalbumine, Taille");
 
 		PatientDiabetesReport patientDiabetesReportResult = diabetesAssessment
@@ -87,7 +87,7 @@ class DiabetesAssessmentTest {
 	@DisplayName("Calculate the diabetes predisposition for a Male with or more than 30yo which result in: IN_DANGER")
 	@Test
 	void givenGettingADiabetesReportForAMaleWithOrMoreThan30Years_whenCalculateDiabetesReportForMale_ThenItReturnAnAccuratePatientDiabetesReportWhichResultOfIn_Danger() {
-		patientMale.setDateOfBirth("01/01/0001");
+		patientMale.setDateOfBirth("0001-01-01");
 		PatientNote patientNote = new PatientNote(UUID.randomUUID(),
 				"Hémoglobine A1C, Microalbumine, Taille, Poids, Fumeur, Anormal, Cholestérol");
 
@@ -100,7 +100,7 @@ class DiabetesAssessmentTest {
 	@DisplayName("Calculate the diabetes predisposition for a Male with or more than 30yo which result in: EARLY_ONSET")
 	@Test
 	void givenGettingADiabetesReportForAMaleWithOrMoreThan30Years_whenCalculateDiabetesReportForMale_ThenItReturnAnAccuratePatientDiabetesReportWhichResultOfEarly_Onset() {
-		patientMale.setDateOfBirth("01/01/0001");
+		patientMale.setDateOfBirth("0001-01-01");
 		PatientNote patientNote = new PatientNote(UUID.randomUUID(),
 				"Hémoglobine A1C, Microalbumine, Taille, Poids, Fumeur, Anormal, Cholestérol, Vertige");
 
@@ -148,7 +148,7 @@ class DiabetesAssessmentTest {
 	@DisplayName("Calculate the diabetes predisposition for a Female with or more than 30yo which result in: NONE")
 	@Test
 	void givenGettingADiabetesReportForAFemaleWithOrMoreThan30Years_whenCalculateDiabetesReportForFemale_ThenItReturnAnAccuratePatientDiabetesReportWhichResultOfNone() {
-		patientFemale.setDateOfBirth("01/01/0001");
+		patientFemale.setDateOfBirth("0001-01-01");
 		PatientNote patientNote = new PatientNote(UUID.randomUUID(), "");
 
 		PatientDiabetesReport patientDiabetesReportResult = diabetesAssessment
@@ -160,7 +160,7 @@ class DiabetesAssessmentTest {
 	@DisplayName("Calculate the diabetes predisposition for a Female with or more than 30yo which result in: BORDERLINE")
 	@Test
 	void givenGettingADiabetesReportForAFemaleWithOrMoreThan30Years_whenCalculateDiabetesReportForFemale_ThenItReturnAnAccuratePatientDiabetesReportWhichResultOfBorderline() {
-		patientFemale.setDateOfBirth("01/01/0001");
+		patientFemale.setDateOfBirth("0001-01-01");
 		PatientNote patientNote = new PatientNote(UUID.randomUUID(), "Hémoglobine A1C, Microalbumine, Taille");
 
 		PatientDiabetesReport patientDiabetesReportResult = diabetesAssessment
@@ -172,7 +172,7 @@ class DiabetesAssessmentTest {
 	@DisplayName("Calculate the diabetes predisposition for a Female with or more than 30yo which result in: IN_DANGER")
 	@Test
 	void givenGettingADiabetesReportForAFemaleWithOrMoreThan30Years_whenCalculateDiabetesReportForFemale_ThenItReturnAnAccuratePatientDiabetesReportWhichResultOfIn_Danger() {
-		patientFemale.setDateOfBirth("01/01/0001");
+		patientFemale.setDateOfBirth("0001-01-01");
 		PatientNote patientNote = new PatientNote(UUID.randomUUID(),
 				"Hémoglobine A1C, Microalbumine, Taille, Poids, Fumeur, Anormal, Cholestérol");
 
@@ -185,7 +185,7 @@ class DiabetesAssessmentTest {
 	@DisplayName("Calculate the diabetes predisposition for a Female with or more than 30yo which result in: EARLY_ONSET")
 	@Test
 	void givenGettingADiabetesReportForAFemaleWithOrMoreThan30Years_whenCalculateDiabetesReportForFemale_ThenItReturnAnAccuratePatientDiabetesReportWhichResultOfEarly_Onset() {
-		patientFemale.setDateOfBirth("01/01/0001");
+		patientFemale.setDateOfBirth("0001-01-01");
 		PatientNote patientNote = new PatientNote(UUID.randomUUID(),
 				"Hémoglobine A1C, Microalbumine, Taille, Poids, Fumeur, Anormal, Cholestérol, Vertige");
 

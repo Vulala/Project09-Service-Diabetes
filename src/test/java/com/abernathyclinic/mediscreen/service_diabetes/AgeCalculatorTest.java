@@ -16,7 +16,7 @@ class AgeCalculatorTest {
 	@DisplayName("Calculate the age of a patient using the birthdate.")
 	@Test
 	void givenGettingTheAgeOfAPatient_whenGetAgeFromBirthDate_ThenItReturnTheAgeOfThePatient() {
-		String birthdate = "01/01/2020";
+		String birthdate = "2020-01-01";
 		int result = ageCalculator.getAgeFromBirthDate(birthdate);
 
 		assertEquals(1, result);

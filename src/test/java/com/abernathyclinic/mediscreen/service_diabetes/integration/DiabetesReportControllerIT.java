@@ -56,7 +56,7 @@ class DiabetesReportControllerIT {
 	@Test
 	void givenGettingADiabetesReportForAPatient_whenGetDiabetesAssessment_thenItReturnAnAccuratePatientDiabetesReport()
 			throws Exception {
-		Patient patientMale = new Patient("lastName", "firstName", "01/01/2000", "male", "homeAddress", "phoneNumber");
+		Patient patientMale = new Patient("lastName", "firstName", "2000-01-01", "male", "homeAddress", "phoneNumber");
 		PatientNote patientNote = new PatientNote(UUID.randomUUID(), "Microalbumine");
 		PatientAndPatientNote patientAndPatientNote = new PatientAndPatientNote(patientMale, patientNote);
 

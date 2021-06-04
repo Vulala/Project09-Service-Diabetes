@@ -16,7 +16,7 @@ public class AgeCalculator {
 	 */
 	public int getAgeFromBirthDate(String birthDate) {
 		int age;
-		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("MM/dd/yyyy"); // Equal to the format from the POJO
+		DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd"); // Equal to the format from the POJO/Front-end
 		LocalDate localDate = LocalDate.now(); // Get the current LocalDate
 		LocalDate localDateBirthDate = LocalDate.parse(birthDate, dateTimeFormatter);
 		// Format the birthDate to a LocalDate according to the dateTimeFormatter
